@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,16 +7,11 @@
   <meta name="description" content="AI Integration Specialist for customer-facing systems. Production-safe RAG, guardrails, escalation, and deployment-ready integrations." />
   <meta name="color-scheme" content="dark light" />
 
-  <!-- Inter (optional). Remove if you want 100% zero external resources. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./styles.css" />
-
-  <meta property="og:title" content="Kyle Todoran — AI Integration Specialist" />
-  <meta property="og:description" content="Production-safe AI integrations for customer-facing systems: grounded RAG, guardrails, escalation, and observability." />
-  <meta property="og:type" content="website" />
 </head>
 
 <body>
@@ -28,6 +22,7 @@
     <div class="bg-glow" aria-hidden="true"></div>
   </div>
 
+  <!-- NAV (ParkProHome-style) -->
   <header class="top">
     <div class="wrap top-inner">
       <div class="brand">
@@ -35,18 +30,29 @@
         <div class="brand-sub">AI Integration Specialist • Customer-facing AI for real products</div>
       </div>
 
+      <nav class="nav-links" aria-label="Primary">
+        <a class="top-link" href="#offer">Offer</a>
+        <a class="top-link" href="#how">Process</a>
+        <a class="top-link" href="#example">Example</a>
+        <a class="top-link" href="#contact">Contact</a>
+      </nav>
+
       <div class="top-right">
         <span class="badge">Selective engagements (1–2 per quarter)</span>
-        <a class="top-link" href="#contact">Contact</a>
+        <a class="btn btn-primary nav-cta"
+           href="mailto:kyle.todoran@parkproit.com?subject=AI%20Integration%20Brief&body=Hi%20Kyle%2C%0A%0A-%20Product%3A%20%0A-%20Goal%3A%20%0A-%20Content%20sources%3A%20%0A-%20Avoid%3A%20%0A">
+          Get the brief
+        </a>
       </div>
     </div>
   </header>
 
   <main id="main" class="wrap" role="main">
-    <!-- HERO -->
-    <section class="hero">
+
+    <!-- HERO (clear L→R reading path) -->
+    <section class="hero hero-rail" id="top">
       <div class="hero-card">
-        <div class="hero-eyebrow">Production-safe AI integrations</div>
+        <div class="hero-eyebrow"><strong>Production-safe</strong> AI integrations</div>
 
         <h1 class="hero-title">
           Customer-facing AI your team can ship confidently.
@@ -57,13 +63,20 @@
           built with guardrails, and designed to behave predictably in production.
         </p>
 
+        <div class="chips">
+          <span class="tag">RAG + grounding</span>
+          <span class="tag">Guardrails-first</span>
+          <span class="tag">Escalation paths</span>
+          <span class="tag">Deploy-ready</span>
+        </div>
+
         <div class="hero-cta">
           <a class="btn btn-primary"
-             href="mailto:kyle.todoran@parkproit.com?subject=AI%20Integration%20Brief&body=Hi%20Kyle%2C%0A%0AWe%27re%20considering%20a%20customer-facing%20AI%20feature.%20Here%27s%20the%20context%3A%0A%0A-%20Product%20or%20platform%3A%20%0A-%20Goal%3A%20%0A-%20Content%20sources%20(docs%2Fpolicies%2Fknowledge%20base)%3A%20%0A-%20Anything%20we%20want%20to%20avoid%3A%20%0A%0AIf%20useful%2C%20we%27d%20love%20a%20guardrails-first%20MVP%20plan.%0A">
+             href="mailto:kyle.todoran@parkproit.com?subject=AI%20Integration%20Brief&body=Hi%20Kyle%2C%0A%0AWe%27re%20considering%20a%20customer-facing%20AI%20feature.%20Context%3A%0A%0A-%20Product%3A%20%0A-%20Goal%3A%20%0A-%20Content%20sources%3A%20%0A-%20Avoid%3A%20%0A">
             Get an AI Integration Brief
           </a>
-          <a class="btn btn-ghost" href="#how">See the process</a>
-          <a class="btn btn-ghost" href="#example">View example</a>
+          <a class="btn btn-ghost" href="#offer">What you get</a>
+          <a class="btn btn-ghost" href="#how">How it works</a>
         </div>
 
         <p class="cta-note">
@@ -77,37 +90,24 @@
           </div>
           <div class="metric">
             <div class="metric-k">Typical outcomes</div>
-            <div class="metric-v">Better self-serve • fewer escalations • more predictable support</div>
+            <div class="metric-v">Better self-serve • fewer escalations • predictable support</div>
           </div>
           <div class="metric">
             <div class="metric-k">Delivery style</div>
             <div class="metric-v">Deployment-ready integrations with observability hooks</div>
           </div>
         </div>
-
-        <div class="proof">
-          <div class="proof-item">
-            <div class="proof-k">Positioning</div>
-            <div class="proof-v">AI features that prioritize safety and brand trust</div>
-          </div>
-          <div class="proof-item">
-            <div class="proof-k">Approach</div>
-            <div class="proof-v">Guardrails-first • source-grounded • escalation built-in</div>
-          </div>
-          <div class="proof-item">
-            <div class="proof-k">Common environments</div>
-            <div class="proof-v">SaaS • eCommerce • knowledge bases • internal tools</div>
-          </div>
-        </div>
       </div>
 
+      <!-- Right “Offer/Deliverables” rail (like ParkProHome hero side) -->
       <aside class="hero-side">
         <div class="side-card">
-          <h2 class="side-title">At a glance</h2>
+          <h2 class="side-title">The brief includes</h2>
           <ul class="list">
-            <li>Customer-facing AI (chat/search/assistants)</li>
-            <li>Grounded answers + guardrails + escalation</li>
-            <li>Safe-by-default integration into existing products</li>
+            <li>Recommended safe scope (what to do / what to avoid)</li>
+            <li>Guardrails + escalation rules</li>
+            <li>MVP architecture + milestones</li>
+            <li>Risks + mitigations</li>
           </ul>
         </div>
 
@@ -117,53 +117,71 @@
             <span class="tag">Node.js API</span>
             <span class="tag">Postgres + pgvector</span>
             <span class="tag">LLM (configurable)</span>
-            <span class="tag">Product APIs / services</span>
-            <span class="tag">AWS / cloud-agnostic deploy</span>
+            <span class="tag">Product APIs</span>
+            <span class="tag">AWS / cloud-agnostic</span>
           </div>
         </div>
 
         <div class="side-card side-cta">
           <h2 class="side-title">Fastest way to start</h2>
           <p class="p-muted" style="margin:0 0 10px;">
-            I’ll return a brief plan: safe scope, guardrails, and MVP steps.
+            Send 3–5 bullets. I’ll reply with a plan.
           </p>
           <a class="btn btn-primary btn-wide"
-             href="mailto:kyle.todoran@parkproit.com?subject=AI%20Integration%20Brief&body=Hi%20Kyle%2C%0A%0AWe%27re%20considering%20a%20customer-facing%20AI%20feature.%20Context%3A%0A%0A-%20Product%3A%20%0A-%20Goal%3A%20%0A-%20Content%20sources%3A%20%0A-%20Avoid%3A%20%0A">
+             href="mailto:kyle.todoran@parkproit.com?subject=AI%20Integration%20Brief&body=Hi%20Kyle%2C%0A%0A-%20Product%3A%20%0A-%20Goal%3A%20%0A-%20Content%20sources%3A%20%0A-%20Avoid%3A%20%0A">
             Request the brief
           </a>
         </div>
       </aside>
     </section>
 
-    <!-- SECTION: WHAT YOU GET -->
+    <!-- SECTION: WHAT YOU GET (now feels like an “offer section”) -->
     <section class="section" id="offer">
       <div class="section-head">
         <h2 class="h2">What you’re getting</h2>
-        <p class="p-muted">A production integration built with constraints—so it’s useful to users and predictable in production.</p>
+        <p class="p-muted">
+          A production integration built with constraints—so it’s useful to users and predictable in production.
+        </p>
       </div>
 
-      <div class="grid-2">
-        <article class="card">
+      <!-- Feature Row 1 -->
+      <div class="feature-row">
+        <div class="feature-copy card">
           <h3 class="h3">Customer-facing AI, safely scoped</h3>
           <ul class="list">
             <li>Grounded chat/search assistants from approved sources</li>
             <li>Knowledge-aware support for self-serve and discovery</li>
-            <li>Policy-aware behavior where applicable (rules, workflows, support)</li>
+            <li>Policy-aware behavior where applicable</li>
           </ul>
-        </article>
+        </div>
+        <div class="feature-media card">
+          <div class="media-title">Designed for production behavior</div>
+          <div class="media-body">
+            Clear refusal paths • consistent tone • safe defaults • predictable outputs
+          </div>
+        </div>
+      </div>
 
-        <article class="card">
+      <!-- Feature Row 2 -->
+      <div class="feature-row reverse">
+        <div class="feature-copy card">
           <h3 class="h3">Governance built in</h3>
           <ul class="list">
-            <li>“Don’t-answer” boundaries and refusal behavior</li>
-            <li>Escalation to a human when uncertain or out-of-scope</li>
+            <li>“Don’t-answer” boundaries + escalation rules</li>
             <li>Logging hooks for review + continuous improvement</li>
+            <li>Monitoring hooks for failure analysis</li>
           </ul>
-        </article>
+        </div>
+        <div class="feature-media card">
+          <div class="media-title">Risk-aware delivery</div>
+          <div class="media-body">
+            Conservative baseline → expand intentionally once behavior is proven
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- CTA BAND (mid-page) -->
+    <!-- CTA BAND (conversion section, ParkPro-style) -->
     <section class="section">
       <div class="cta-band">
         <div>
@@ -182,11 +200,13 @@
       </div>
     </section>
 
-    <!-- SECTION: BOUNDARIES -->
+    <!-- BOUNDARIES -->
     <section class="section" id="boundaries">
       <div class="section-head">
         <h2 class="h2">Boundaries / safety posture</h2>
-        <p class="p-muted">Constraints are how AI becomes usable in production. Defaults are conservative; scope expands intentionally.</p>
+        <p class="p-muted">
+          Constraints are how AI becomes usable in production. Defaults are conservative; scope expands intentionally.
+        </p>
       </div>
 
       <div class="callout">
@@ -214,7 +234,7 @@
       </div>
     </section>
 
-    <!-- SECTION: HOW I WORK -->
+    <!-- HOW -->
     <section class="section" id="how">
       <div class="section-head">
         <h2 class="h2">How I work</h2>
@@ -244,11 +264,13 @@
       </div>
     </section>
 
-    <!-- SECTION: EXAMPLE -->
+    <!-- EXAMPLE -->
     <section class="section" id="example">
       <div class="section-head">
         <h2 class="h2">Example implementation (sanitized)</h2>
-        <p class="p-muted">Custom product UI + API layer, grounded via vector retrieval, with guardrails and escalation logic.</p>
+        <p class="p-muted">
+          Custom product UI + API layer, grounded via vector retrieval, with guardrails and escalation logic.
+        </p>
       </div>
 
       <div class="card">
@@ -269,7 +291,7 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT (final conversion section) -->
     <section class="section" id="contact">
       <div class="section-head">
         <h2 class="h2">Contact</h2>
@@ -287,7 +309,7 @@
              href="mailto:kyle.todoran@parkproit.com?subject=AI%20Integration%20Brief&body=Hi%20Kyle%2C%0A%0A-%20Product%3A%20%0A-%20Goal%3A%20%0A-%20Content%20sources%3A%20%0A-%20Avoid%3A%20%0A">
             Get the brief
           </a>
-          <a class="btn btn-ghost btn-wide" href="#main">Back to top</a>
+          <a class="btn btn-ghost btn-wide" href="#top">Back to top</a>
         </div>
       </div>
     </section>
