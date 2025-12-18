@@ -1,214 +1,253 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kyle Todoran – Production AI Integrations for eCommerce</title>
-  <meta name="description" content="Production-grade AI integrations for customer-facing eCommerce: grounded RAG, guardrails, escalation paths, and deployment-ready systems." />
-  <meta name="color-scheme" content="light dark" />
+  <title>Kyle Todoran — AI Integration Specialist</title>
+  <meta name="description" content="AI Integration Specialist for customer-facing eCommerce. Production-safe RAG, guardrails, escalation paths, and deployment-ready systems." />
+  <meta name="color-scheme" content="dark light" />
+
+  <!-- Inter (optional). Remove if you want 100% zero external resources. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./styles.css" />
+
+  <meta property="og:title" content="Kyle Todoran — AI Integration Specialist" />
+  <meta property="og:description" content="Production-safe AI integrations for customer-facing eCommerce: grounded RAG, guardrails, escalation, and observability." />
+  <meta property="og:type" content="website" />
 </head>
 
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <div class="wrap">
-    <header class="top">
+  <div class="bg">
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow" aria-hidden="true"></div>
+  </div>
+
+  <header class="top">
+    <div class="wrap top-inner">
       <div class="brand">
-        <div class="name">Kyle Todoran</div>
-        <div class="tagline">Production-grade AI integrations for customer-facing eCommerce</div>
-      </div>
-      <div class="pill" aria-label="Availability note">Selective engagements (1–2 per quarter)</div>
-    </header>
-
-    <main id="main" class="layout" role="main">
-      <!-- MAIN COLUMN -->
-      <div class="maincol">
-        <!-- HERO -->
-        <section class="hero card">
-          <h1>Production-safe AI, designed with boundaries.</h1>
-          <p class="lede">
-            I help teams ship customer-facing AI (chat, search, knowledge assistants) that stays grounded in your content,
-            includes guardrails by default, and behaves predictably in real production environments.
-          </p>
-
-          <div class="cta">
-            <a class="btn" href="mailto:kyle.todoran@parkproit.com?subject=AI%20Integration%20Intro">Email: kyle.todoran@parkproit.com</a>
-            <a class="link" href="#how">How I work</a>
-            <a class="link" href="#example">Example</a>
-          </div>
-
-          <div class="highlights">
-            <div class="highlight">
-              <div class="k">Core capability</div>
-              <div class="v">RAG retrieval + guardrails (Shopify + modern web apps)</div>
-            </div>
-            <div class="highlight">
-              <div class="k">Typical outcomes</div>
-              <div class="v">Lower support load • better product discovery • controlled escalation</div>
-            </div>
-            <div class="highlight">
-              <div class="k">Delivery style</div>
-              <div class="v">Deployment-ready systems with observability hooks</div>
-            </div>
-          </div>
-        </section>
-
-        <!-- WHAT YOU GET -->
-        <section class="panel" id="offer">
-          <div class="panelhead">
-            <h2>What you’re getting</h2>
-            <p class="sub">A production integration, not a demo chatbot.</p>
-          </div>
-
-          <div class="cards2">
-            <div class="card">
-              <h3>Customer-facing AI, safely scoped</h3>
-              <ul>
-                <li>Chat/search assistants grounded in approved sources</li>
-                <li>Catalog-aware support for product discovery</li>
-                <li>Policy-aware behavior (shipping, returns, guarantees)</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <h3>Governance built-in</h3>
-              <ul>
-                <li>“Don’t-answer” boundaries and refusal behavior</li>
-                <li>Escalation path to human support when uncertain</li>
-                <li>Logging hooks for review + improvement</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- BOUNDARIES -->
-        <section class="panel" id="boundaries">
-          <div class="panelhead">
-            <h2>Boundaries / safety posture</h2>
-            <p class="sub">Constraints are the product. They’re how AI becomes usable in production.</p>
-          </div>
-
-          <div class="callout card">
-            <div class="calloutgrid">
-              <div>
-                <h3>Default constraints</h3>
-                <ul>
-                  <li>No checkout or payments automation</li>
-                  <li>No medical/legal claims</li>
-                  <li>No sensitive personal data unless explicitly designed for it</li>
-                  <li>Scope-limited answers only (grounded sources)</li>
-                </ul>
-              </div>
-              <div>
-                <h3>Reliability measures</h3>
-                <ul>
-                  <li>Grounding + citations (or “based on” signals)</li>
-                  <li>Escalation when confidence is low</li>
-                  <li>Audit-friendly logging and review loops</li>
-                  <li>Monitoring hooks to track failures + gaps</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- HOW I WORK -->
-        <section class="panel" id="how">
-          <div class="panelhead">
-            <h2>How I work</h2>
-            <p class="sub">Two phases so you get something safe quickly, then optimize with real data.</p>
-          </div>
-
-          <div class="timeline">
-            <div class="step card">
-              <div class="stepnum">Phase 1</div>
-              <h3>Discovery → Architecture → MVP</h3>
-              <ul>
-                <li>Confirm use cases, content sources, and risk boundaries</li>
-                <li>Implement retrieval (RAG), guardrails, and escalation</li>
-                <li>Ship a production-ready baseline (safe-by-default)</li>
-              </ul>
-            </div>
-
-            <div class="step card">
-              <div class="stepnum">Phase 2</div>
-              <h3>Optimization → Analytics → Expansion</h3>
-              <ul>
-                <li>Conversation analytics, failure analysis, and gap detection</li>
-                <li>Retrieval tuning + lightweight content workflows</li>
-                <li>Deeper integrations (CRM/support desk) where appropriate</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- EXAMPLE -->
-        <section class="panel" id="example">
-          <div class="panelhead">
-            <h2>Example implementation (sanitized)</h2>
-            <p class="sub">A Shopify assistant with a custom widget + API layer, grounded via pgvector retrieval.</p>
-          </div>
-
-          <div class="card">
-            <div class="facts">
-              <div class="fact">
-                <div class="k">Widget</div>
-                <div class="v">Embedded JS + CSS; theme-friendly; degrades gracefully</div>
-              </div>
-              <div class="fact">
-                <div class="k">Retrieval</div>
-                <div class="v">Postgres + pgvector; chunking; relevance tuning</div>
-              </div>
-              <div class="fact">
-                <div class="k">Guardrails</div>
-                <div class="v">Scope rules; refusal behavior; escalation prompts; safe defaults</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <footer class="footer">
-          <div>© <span id="y"></span> Kyle Todoran</div>
-          <a class="link" href="#main">Back to top</a>
-        </footer>
+        <div class="brand-name">Kyle Todoran</div>
+        <div class="brand-sub">AI Integration Specialist • Customer-facing eCommerce</div>
       </div>
 
-      <!-- SIDEBAR -->
-      <aside class="side">
-        <div class="sticky">
-          <section class="card sidecard">
-            <h2>At a glance</h2>
-            <ul>
-              <li>Customer-facing AI (chat/search/assistants)</li>
-              <li>Grounded RAG + guardrails + escalation</li>
-              <li>Shopify-safe integrations</li>
-            </ul>
-          </section>
+      <div class="top-right">
+        <span class="badge">Selective engagements (1–2 per quarter)</span>
+        <a class="top-link" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
 
-          <section class="card sidecard">
-            <h2>Typical stack</h2>
-            <div class="tags">
-              <span class="tag">Node.js API</span>
-              <span class="tag">Postgres + pgvector</span>
-              <span class="tag">LLM (configurable)</span>
-              <span class="tag">Shopify APIs</span>
-              <span class="tag">AWS / cloud-agnostic</span>
-            </div>
-          </section>
+  <main id="main" class="wrap" role="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card">
+        <div class="hero-eyebrow">Production-safe AI integrations</div>
+        <h1 class="hero-title">
+          Ship customer-facing AI with guardrails,<br class="hide-sm" />
+          not surprises.
+        </h1>
+        <p class="hero-lede">
+          I help teams integrate AI (chat, search, knowledge assistants) into real eCommerce products—grounded in approved content,
+          designed with boundaries, and built to behave predictably in production.
+        </p>
 
-          <section class="card sidecard">
-            <h2>Contact</h2>
-            <p class="sub" style="margin-top:0">
-              If a client is asking “Can we add AI?” and you want it done safely:
-            </p>
-            <a class="btn full" href="mailto:kyle.todoran@parkproit.com?subject=AI%20Integration%20Intro">Email me</a>
-            <div class="smallmuted">kyle.todoran@parkproit.com</div>
-          </section>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="mailto:kyle.todoran@parkproit.com?subject=AI%20Integration%20Intro">
+            Email: kyle.todoran@parkproit.com
+          </a>
+          <a class="btn btn-ghost" href="#how">How I work</a>
+          <a class="btn btn-ghost" href="#example">Example</a>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric">
+            <div class="metric-k">Focus</div>
+            <div class="metric-v">RAG + guardrails for Shopify and modern web apps</div>
+          </div>
+          <div class="metric">
+            <div class="metric-k">Outcomes</div>
+            <div class="metric-v">Lower support load • better discovery • controlled escalation</div>
+          </div>
+          <div class="metric">
+            <div class="metric-k">Delivery</div>
+            <div class="metric-v">Deployment-ready systems with observability hooks</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <div class="side-card">
+          <h2 class="side-title">At a glance</h2>
+          <ul class="list">
+            <li>Customer-facing AI (chat/search/assistants)</li>
+            <li>Grounded RAG + guardrails + escalation</li>
+            <li>Shopify-safe integrations (risk-aware scope)</li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <h2 class="side-title">Typical stack</h2>
+          <div class="tags">
+            <span class="tag">Node.js API</span>
+            <span class="tag">Postgres + pgvector</span>
+            <span class="tag">LLM (configurable)</span>
+            <span class="tag">Shopify APIs</span>
+            <span class="tag">AWS / cloud-agnostic deploy</span>
+          </div>
         </div>
       </aside>
-    </main>
-  </div>
+    </section>
+
+    <!-- SECTION: WHAT YOU GET -->
+    <section class="section" id="offer">
+      <div class="section-head">
+        <h2 class="h2">What you’re getting</h2>
+        <p class="p-muted">A production integration—built with constraints—so it’s useful to customers and low-risk for the business.</p>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <h3 class="h3">Customer-facing AI, safely scoped</h3>
+          <ul class="list">
+            <li>Chat/search assistants grounded in approved sources</li>
+            <li>Catalog-aware support for discovery and navigation</li>
+            <li>Policy-aware behavior (shipping, returns, guarantees)</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3 class="h3">Governance built in</h3>
+          <ul class="list">
+            <li>“Don’t-answer” boundaries and refusal behavior</li>
+            <li>Escalation to human support when uncertain</li>
+            <li>Logging hooks for review + continuous improvement</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION: BOUNDARIES -->
+    <section class="section" id="boundaries">
+      <div class="section-head">
+        <h2 class="h2">Boundaries / safety posture</h2>
+        <p class="p-muted">Constraints are how AI becomes usable in production. Defaults are conservative; scope expands intentionally.</p>
+      </div>
+
+      <div class="callout">
+        <div class="grid-2 tight">
+          <article class="card card-flat">
+            <h3 class="h3">Default constraints</h3>
+            <ul class="list">
+              <li>No checkout or payments automation</li>
+              <li>No medical or legal claims</li>
+              <li>No sensitive personal data unless explicitly designed for</li>
+              <li>Scope-limited, source-grounded answers only</li>
+            </ul>
+          </article>
+
+          <article class="card card-flat">
+            <h3 class="h3">Reliability measures</h3>
+            <ul class="list">
+              <li>Grounding + citations (or “based on” signals)</li>
+              <li>Escalation when confidence is low</li>
+              <li>Audit-friendly logging for quality + safety review</li>
+              <li>Monitoring hooks for failure analysis and iteration</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: HOW I WORK -->
+    <section class="section" id="how">
+      <div class="section-head">
+        <h2 class="h2">How I work</h2>
+        <p class="p-muted">Two phases: ship a safe baseline quickly, then optimize based on real user behavior.</p>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <div class="pill">Phase 1</div>
+          <h3 class="h3">Discovery → Architecture → MVP</h3>
+          <ul class="list">
+            <li>Confirm use cases, content sources, and risk boundaries</li>
+            <li>Implement retrieval (RAG), guardrails, and escalation</li>
+            <li>Ship a production-ready baseline (safe-by-default)</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="pill">Phase 2</div>
+          <h3 class="h3">Optimization → Analytics → Expansion</h3>
+          <ul class="list">
+            <li>Conversation analytics, failure analysis, and gap detection</li>
+            <li>Retrieval tuning and lightweight content workflows</li>
+            <li>Deeper integrations (CRM/support desk) where appropriate</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION: EXAMPLE -->
+    <section class="section" id="example">
+      <div class="section-head">
+        <h2 class="h2">Example implementation (sanitized)</h2>
+        <p class="p-muted">Shopify assistant with a custom widget + API layer, grounded via vector retrieval, with guardrails and escalation logic.</p>
+      </div>
+
+      <div class="card">
+        <div class="facts">
+          <div class="fact">
+            <div class="fact-k">Widget</div>
+            <div class="fact-v">Embedded JS + CSS; theme-friendly; degrades gracefully</div>
+          </div>
+          <div class="fact">
+            <div class="fact-k">Retrieval</div>
+            <div class="fact-v">Postgres + pgvector; chunking; relevance tuning</div>
+          </div>
+          <div class="fact">
+            <div class="fact-k">Guardrails</div>
+            <div class="fact-v">Scope rules; refusal behavior; escalation prompts; safe defaults</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="section-head">
+        <h2 class="h2">Contact</h2>
+        <p class="p-muted">If a client is asking “Can we add AI?” and you want it done safely:</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-left">
+          <div class="contact-label">Email</div>
+          <a class="contact-email" href="mailto:kyle.todoran@parkproit.com?subject=AI%20Integration%20Intro">kyle.todoran@parkproit.com</a>
+          <div class="contact-note">Short context is perfect. A few sentences is enough.</div>
+        </div>
+        <div class="contact-right">
+          <a class="btn btn-primary btn-wide" href="mailto:kyle.todoran@parkproit.com?subject=AI%20Integration%20Intro">Email me</a>
+          <a class="btn btn-ghost btn-wide" href="#main">Back to top</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="y"></span> Kyle Todoran</div>
+      <div class="footer-links">
+        <a href="#offer">Offer</a>
+        <a href="#boundaries">Boundaries</a>
+        <a href="#how">Process</a>
+        <a href="#example">Example</a>
+      </div>
+    </footer>
+  </main>
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
