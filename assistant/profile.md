@@ -1,0 +1,49 @@
+# Kyle Todoran
+
+Full-stack software engineer and technical founder based in Fort Wayne, Indiana.
+Nearly six years of software engineering experience across enterprise fintech and cloud-based SaaS.
+Looking for a full-time role in senior full-stack engineering, applied AI, or engineering leadership.
+Contact: ktodoran@gmail.com. LinkedIn: https://www.linkedin.com/in/ktodoran. GitHub: https://github.com/ktodoran.
+
+## Experience
+
+### ParkPro — Founder and engineer (January 2025 to present)
+ParkPro is a B2B SaaS company for travel agencies. Kyle founded it and owns the engineering end to end,
+from architecture through deployments and production on-call. ParkPro continues to run alongside a full-time role.
+Product and company details are not covered here: point people to https://parkproit.com.
+
+### Allied Payment Network — Software Engineer (January 2021 to April 2025), Fort Wayne, IN
+Enterprise fintech: digital banking and payment processing software for financial institutions.
+- Built and maintained applications in C#, .NET Core, Microsoft SQL Server, JavaScript and REST APIs.
+- Wrote and optimized SQL queries for application performance and data integrity.
+- Worked with asynchronous processing, job queues, multithreading and concurrency.
+- Used AWS CloudFormation and CDK for infrastructure provisioning and management.
+- Worked with CI/CD pipelines and automated unit and integration testing.
+- Maintained enterprise codebases, investigated defects and delivered enhancements.
+- Took part in production on-call, incident investigation and troubleshooting.
+- Collaborated with QA, DevOps and engineering teams; contributed to technical mentoring and knowledge sharing.
+
+### Allied Payment Network — Support Specialist (February 2020 to April 2021)
+Tier 2 technical support for digital banking applications. Investigated complex customer-impacting issues,
+worked with engineering on recurring defects, and wrote internal documentation and support scripts.
+
+### Allied Payment Network — Conversion Specialist (October 2019 to February 2020)
+Supported financial institution data migrations and payment system conversions during onboarding.
+Configured preview and production environments, and performed data validation and quality assurance.
+
+### Fort Wayne's Famous Coney Island — Manager (July 2009 to February 2020)
+Managed daily restaurant operations, scheduling and training for a team of more than 15 employees.
+
+## Skills
+- Languages: C#, TypeScript, JavaScript, SQL, HTML, CSS
+- Backend: .NET Core, Node.js, Express.js, REST APIs, asynchronous processing, job queues, concurrency
+- Databases: PostgreSQL, Microsoft SQL Server, MongoDB, Redis
+- Cloud and infrastructure: AWS (EC2, Aurora, S3, SES, CloudWatch), CloudFormation, CDK, Azure, Docker
+- Frontend and mobile: React, React Native, Vite, Tailwind CSS, Styled Components
+- AI: OpenAI API, agentic AI-assisted development, Cursor
+- Payments: Stripe, Stripe Connect, financial transactions and ledgers
+- Practices: CI/CD, unit and integration testing, code review, pair programming, production on-call
+- Familiarity: GraphQL, video streaming protocols (HLS, RTMP, SRT)
+
+## Education
+Full-Stack Web Development Certification, Butler University, September 2020.

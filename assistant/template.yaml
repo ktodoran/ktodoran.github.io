@@ -1,0 +1,57 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Assistant endpoint for ktodoran.github.io. One Lambda behind a Function URL.
+
+Parameters:
+  AllowedOrigins:
+    Type: CommaDelimitedList
+    Default: https://ktodoran.github.io
+    Description: Origins allowed to call the endpoint. Add http://localhost:5173 for local development.
+  OpenAiModel:
+    Type: String
+    Default: gpt-5.6-luna
+    Description: OpenAI model id. Pick a small, inexpensive one; check the current list at developers.openai.com.
+  OpenAiKeyParameterName:
+    Type: String
+    Default: portfolio-assistant/openai-api-key
+    Description: Name (without a leading slash) of the SSM SecureString parameter that holds the OpenAI API key.
+
+Resources:
+  AssistantFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Description: Answers questions about Kyle Todoran's resume.
+      CodeUri: .
+      Handler: handler.handler
+      Runtime: nodejs22.x
+      Architectures: [arm64]
+      MemorySize: 256
+      Timeout: 30
+      # Caps how many requests can run (and call OpenAI) at once.
+      ReservedConcurrentExecutions: 2
+      Environment:
+        Variables:
+          ALLOWED_ORIGINS: !Join [',', !Ref AllowedOrigins]
+          OPENAI_MODEL: !Ref OpenAiModel
+          OPENAI_KEY_PARAMETER: !Sub '/${OpenAiKeyParameterName}'
+      Policies:
+        - SSMParameterReadPolicy:
+            ParameterName: !Ref OpenAiKeyParameterName
+      FunctionUrlConfig:
+        AuthType: NONE
+        Cors:
+          AllowOrigins: !Ref AllowedOrigins
+          AllowMethods: [POST]
+          AllowHeaders: [content-type]
+          MaxAge: 86400
+
+  AssistantLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub '/aws/lambda/${AssistantFunction}'
+      RetentionInDays: 14
+
+Outputs:
+  AssistantUrl:
+    Description: Set this as the ASSISTANT_URL repository variable on GitHub.
+    Value: !GetAtt AssistantFunctionUrl.FunctionUrl

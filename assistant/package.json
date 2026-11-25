@@ -1,0 +1,6 @@
+{
+  "name": "portfolio-assistant",
+  "private": true,
+  "type": "module",
+  "description": "Lambda behind the assistant on ktodoran.github.io. No runtime dependencies: the AWS SDK ships with the Node.js Lambda runtime."
+}
