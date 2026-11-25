@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kyle Todoran, full-stack software engineer</title>
-  <meta name="description" content="Full-stack software engineer in Fort Wayne, Indiana. Four years building payment systems in fintech, now founder and engineer of ParkPro, a production SaaS platform on React, Node.js, PostgreSQL and AWS.">
+  <meta name="description" content="Full-stack software engineer in Fort Wayne, Indiana. Four years building payment systems in fintech, now founder and engineer of ParkPro, a B2B SaaS company.">
   <meta name="author" content="Kyle Todoran">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#F4F7F5" media="(prefers-color-scheme: light)">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://ktodoran.github.io/">
   <meta property="og:title" content="Kyle Todoran, full-stack software engineer">
-  <meta property="og:description" content="Four years building payment systems in fintech, now founder and engineer of ParkPro, a production SaaS platform on React, Node.js, PostgreSQL and AWS.">
+  <meta property="og:description" content="Four years building payment systems in fintech, now founder and engineer of ParkPro, a B2B SaaS company.">
   <meta property="og:image" content="https://ktodoran.github.io/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -47,7 +47,6 @@
       <a class="site-name" href="#top">Kyle Todoran</a>
       <nav aria-label="Sections">
         <ul class="site-nav">
-          <li><a href="#work">Work</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -66,7 +65,7 @@
             <p class="lead">
               I’m Kyle Todoran, a full-stack engineer in Fort Wayne, Indiana. I spent four years building
               payment systems at a fintech company, and since 2025 I’ve been the founder and engineer of
-              ParkPro, a SaaS platform I designed, shipped and run in production.
+              ParkPro, a B2B SaaS company.
             </p>
             <p class="lead">
               I’m looking for a full-time role. ParkPro keeps running on the side.
@@ -101,115 +100,21 @@
       </div>
     </section>
 
-    <section class="block" id="work" aria-labelledby="work-title">
+    <section class="block" id="experience" aria-labelledby="experience-title">
       <div class="wrap">
-        <h2 id="work-title">Current work</h2>
+        <h2 id="experience-title">Experience</h2>
 
         <div class="row">
           <p class="key">2025–present</p>
           <div class="val">
-            <h3>ParkPro <span class="role">Founder and engineer</span></h3>
+            <h3>Founder and engineer <span class="role">ParkPro</span></h3>
             <p>
-              ParkPro is a B2B SaaS platform for travel agencies that specialize in Walt Disney World.
-              Agents use it to manage clients and trips and to build day-by-day park itineraries, and their
-              travelers get the finished plan in a mobile app on iOS and Android. I designed the
-              architecture, wrote the code and operate it in production.
+              ParkPro is a B2B SaaS company for travel agencies. I founded it and own the engineering end
+              to end, from architecture through production on-call.
             </p>
             <p><a href="https://parkproit.com">Visit parkproit.com</a></p>
-
-            <figure class="arch">
-              <div class="arch-grid">
-                <p class="tier-name">Clients</p>
-                <ul class="nodes" style="--n: 3">
-                  <li><strong>Agent web app</strong><span>React</span></li>
-                  <li><strong>Traveler mobile app</strong><span>iOS and Android</span></li>
-                  <li><strong>Admin workspace</strong><span>Internal operations</span></li>
-                </ul>
-
-                <div class="wires" aria-hidden="true">
-                  <div class="stubs" style="--n: 3"><i></i><i></i><i></i></div>
-                  <div class="stubs stubs-in" style="--n: 1"><i></i></div>
-                </div>
-
-                <p class="tier-name">API</p>
-                <ul class="nodes hub" style="--n: 1">
-                  <li><strong>REST API</strong><span>Node.js and Express on EC2</span></li>
-                </ul>
-
-                <div class="wires" aria-hidden="true">
-                  <div class="stubs" style="--n: 1"><i></i></div>
-                  <div class="stubs stubs-in" style="--n: 3"><i></i><i></i><i></i></div>
-                </div>
-
-                <p class="tier-name">Services</p>
-                <ul class="nodes" style="--n: 3">
-                  <li><strong>Itinerary engine</strong><span>Rules and scheduling constraints</span></li>
-                  <li><strong>Background jobs</strong><span>Queues and scheduled ingestion</span></li>
-                  <li><strong>Integrations</strong><span>OpenAI, Stripe, third-party data APIs</span></li>
-                </ul>
-
-                <div class="wires" aria-hidden="true">
-                  <div class="stubs" style="--n: 3"><i></i><i></i><i></i></div>
-                  <div class="stubs stubs-in" style="--n: 4"><i></i><i></i><i></i><i></i></div>
-                </div>
-
-                <p class="tier-name">Data</p>
-                <ul class="nodes" style="--n: 4">
-                  <li><strong>PostgreSQL</strong><span>Aurora</span></li>
-                  <li><strong>Redis</strong><span>Cache and queues</span></li>
-                  <li><strong>S3</strong><span>File storage</span></li>
-                  <li><strong>SES</strong><span>Email</span></li>
-                </ul>
-              </div>
-
-              <figcaption>
-                ParkPro’s architecture. The infrastructure is defined in CloudFormation and CDK, monitored
-                in CloudWatch and deployed through CI/CD with unit and integration tests.
-              </figcaption>
-            </figure>
-
-            <h4>What I built</h4>
-            <dl class="built">
-              <div>
-                <dt>Itinerary engine</dt>
-                <dd>A rule-based engine that turns external park data and each trip’s scheduling
-                  requirements into a day-by-day plan. Rules keep the output explainable, and the agent
-                  can change any of it.</dd>
-              </div>
-              <div>
-                <dt>Background processing</dt>
-                <dd>Third-party API integrations, automated data ingestion and scheduled jobs, run
-                  asynchronously through job queues.</dd>
-              </div>
-              <div>
-                <dt>AI inside the workflow</dt>
-                <dd>OpenAI is integrated into the screens agents already use, not added as a separate
-                  chatbot. The system proposes and the agent approves.</dd>
-              </div>
-              <div>
-                <dt>Infrastructure as code</dt>
-                <dd>AWS infrastructure defined in CloudFormation and CDK, covering EC2, Aurora, S3, SES
-                  and CloudWatch.</dd>
-              </div>
-              <div>
-                <dt>Testing and delivery</dt>
-                <dd>CI/CD pipelines with automated unit and integration tests. I plan, implement and
-                  test with Cursor coding agents, with the test suite as the check.</dd>
-              </div>
-              <div>
-                <dt>Operations</dt>
-                <dd>I own database migrations, deployments, production on-call and incident
-                  resolution.</dd>
-              </div>
-            </dl>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="block" id="experience" aria-labelledby="experience-title">
-      <div class="wrap">
-        <h2 id="experience-title">Experience</h2>
 
         <div class="row">
           <p class="key">2021–2025</p>
