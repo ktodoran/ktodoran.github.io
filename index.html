@@ -1,381 +1,341 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kyle Todoran — AI Integration Specialist</title>
-  <meta name="description" content="Production-grade customer-facing AI integrations with guardrails, grounding, and escalation—built to behave predictably in production." />
-  <meta name="color-scheme" content="dark light" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kyle Todoran, full-stack software engineer</title>
+  <meta name="description" content="Full-stack software engineer in Fort Wayne, Indiana. Four years building payment systems in fintech, now founder and engineer of ParkPro, a production SaaS platform on React, Node.js, PostgreSQL and AWS.">
+  <meta name="author" content="Kyle Todoran">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F4F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0D1613" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://ktodoran.github.io/">
 
-  <!-- Optional: Inter. Remove for zero external resources. -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://ktodoran.github.io/">
+  <meta property="og:title" content="Kyle Todoran, full-stack software engineer">
+  <meta property="og:description" content="Four years building payment systems in fintech, now founder and engineer of ParkPro, a production SaaS platform on React, Node.js, PostgreSQL and AWS.">
+  <meta property="og:image" content="https://ktodoran.github.io/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kyle Todoran",
+    "jobTitle": "Software Engineer",
+    "url": "https://ktodoran.github.io/",
+    "email": "mailto:ktodoran@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Fort Wayne", "addressRegion": "IN", "addressCountry": "US" },
+    "sameAs": ["https://github.com/ktodoran", "https://www.linkedin.com/in/ktodoran"]
+  }
+  </script>
 </head>
 
 <body>
-  <!-- Ambient background glows -->
-  <div class="bg-ambient" aria-hidden="true"></div>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- NAV -->
-  <header class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="#top" aria-label="Home">
-        <div class="brand-title">Kyle Todoran</div>
-        <div class="brand-sub">AI Integration Specialist • Customer-facing AI for real products</div>
-      </a>
-
-      <nav class="nav-links" aria-label="Primary">
-        <a href="#offer">Offer</a>
-        <a href="#process">Process</a>
-        <a href="#example">Example</a>
-        <a href="#contact">Contact</a>
+  <header class="site-header">
+    <div class="wrap site-header-inner">
+      <a class="site-name" href="#top">Kyle Todoran</a>
+      <nav aria-label="Sections">
+        <ul class="site-nav">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
-
-      <div class="nav-cta">
-        <span class="pill subtle">Selective engagements (1–2 per quarter)</span>
-        <a class="btn btn-gold" href="#contact">Get the brief</a>
-      </div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <main id="top">
-    <section class="section section-hero">
-      <div class="container">
-        <div class="hero-grid hero-surface">
-          <!-- Left: Primary story -->
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap">
+        <h1>I build production software and stay on call for it.</h1>
+
+        <div class="hero-grid">
           <div class="hero-main">
-            <div class="kicker">
-              <span class="kicker-dot" aria-hidden="true"></span>
-              <span class="kicker-text">PRODUCTION-SAFE AI INTEGRATIONS</span>
-            </div>
-
-            <h1 class="h1">
-              Customer-facing AI<br/>
-              your team can ship<br/>
-              confidently.
-            </h1>
-
             <p class="lead">
-              I help teams integrate customer-facing AI (chat, search, knowledge assistants) into real products—
-              grounded in approved sources, built with guardrails, and designed to behave predictably in production.
+              I’m Kyle Todoran, a full-stack engineer in Fort Wayne, Indiana. I spent four years building
+              payment systems at a fintech company, and since 2025 I’ve been the founder and engineer of
+              ParkPro, a SaaS platform I designed, shipped and run in production.
             </p>
-
-            <div class="chip-row" aria-label="Highlights">
-              <span class="chip">RAG + grounding</span>
-              <span class="chip">Guardrails-first</span>
-              <span class="chip">Escalation paths</span>
-              <span class="chip">Deploy-ready</span>
-            </div>
-
-            <div class="hero-actions">
-              <a class="btn btn-gold" href="#contact">Get an AI Integration Brief</a>
-              <a class="btn btn-ghost" href="#offer">What you get</a>
-              <a class="btn btn-ghost" href="#process">How it works</a>
-            </div>
-
-            <p class="micro">
-              Low-friction starting point: scope + guardrails + a safe MVP path. No sales pitch.
+            <p class="lead">
+              I’m looking for a full-time role. ParkPro keeps running on the side.
             </p>
-
-            <div class="hero-divider" aria-hidden="true"></div>
-
-            <div class="hero-metrics">
-              <div class="metric">
-                <div class="metric-label">Core capability</div>
-                <div class="metric-value">Grounded RAG + guardrails + escalation for customer-facing systems</div>
-              </div>
-              <div class="metric">
-                <div class="metric-label">Typical outcomes</div>
-                <div class="metric-value">Better self-serve • fewer escalations • predictable support</div>
-              </div>
-              <div class="metric">
-                <div class="metric-label">Delivery style</div>
-                <div class="metric-value">Deployment-ready integrations with observability hooks</div>
-              </div>
-            </div>
-
-            <!-- Small “visual anchor” (no images) -->
-            <div class="hero-visual" aria-label="System overview">
-              <div class="visual-pill">User</div>
-              <div class="visual-line"></div>
-              <div class="visual-box">
-                <div class="visual-title">AI Layer</div>
-                <div class="visual-meta">Guardrails • Grounding • Escalation • Monitoring</div>
-              </div>
-              <div class="visual-line"></div>
-              <div class="visual-pill">Product APIs</div>
-            </div>
+            <p class="hero-actions">
+              <a class="button" href="mailto:ktodoran@gmail.com">Email me</a>
+              <a href="Kyle_Todoran_Resume.pdf" type="application/pdf">Resume (PDF)</a>
+              <a href="https://www.linkedin.com/in/ktodoran">LinkedIn</a>
+              <a href="https://github.com/ktodoran">GitHub</a>
+            </p>
           </div>
 
-          <!-- Right: Rail -->
-          <aside class="hero-rail" aria-label="Brief details">
-            <div class="rail sticky-rail">
-              <div class="rail-card">
-                <h3 class="h3">The brief includes</h3>
-                <ul class="list">
-                  <li>Recommended safe scope (what to do / what to avoid)</li>
-                  <li>Guardrails + escalation rules</li>
-                  <li>MVP architecture + milestones</li>
-                  <li>Risks + mitigations</li>
+          <dl class="glance">
+            <div>
+              <dt>Open to</dt>
+              <dd>Senior full-stack, applied AI and engineering leadership roles</dd>
+            </div>
+            <div>
+              <dt>Now</dt>
+              <dd>Founder and engineer, ParkPro</dd>
+            </div>
+            <div>
+              <dt>Before</dt>
+              <dd>Software Engineer, Allied Payment Network</dd>
+            </div>
+            <div>
+              <dt>Based in</dt>
+              <dd>Fort Wayne, Indiana</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <h2 id="work-title">Current work</h2>
+
+        <div class="row">
+          <p class="key">2025–present</p>
+          <div class="val">
+            <h3>ParkPro <span class="role">Founder and engineer</span></h3>
+            <p>
+              ParkPro is a B2B SaaS platform for travel agencies that specialize in Walt Disney World.
+              Agents use it to manage clients and trips and to build day-by-day park itineraries, and their
+              travelers get the finished plan in a mobile app on iOS and Android. I designed the
+              architecture, wrote the code and operate it in production.
+            </p>
+            <p><a href="https://parkproit.com">Visit parkproit.com</a></p>
+
+            <figure class="arch">
+              <div class="arch-grid">
+                <p class="tier-name">Clients</p>
+                <ul class="nodes" style="--n: 3">
+                  <li><strong>Agent web app</strong><span>React</span></li>
+                  <li><strong>Traveler mobile app</strong><span>iOS and Android</span></li>
+                  <li><strong>Admin workspace</strong><span>Internal operations</span></li>
+                </ul>
+
+                <div class="wires" aria-hidden="true">
+                  <div class="stubs" style="--n: 3"><i></i><i></i><i></i></div>
+                  <div class="stubs stubs-in" style="--n: 1"><i></i></div>
+                </div>
+
+                <p class="tier-name">API</p>
+                <ul class="nodes hub" style="--n: 1">
+                  <li><strong>REST API</strong><span>Node.js and Express on EC2</span></li>
+                </ul>
+
+                <div class="wires" aria-hidden="true">
+                  <div class="stubs" style="--n: 1"><i></i></div>
+                  <div class="stubs stubs-in" style="--n: 3"><i></i><i></i><i></i></div>
+                </div>
+
+                <p class="tier-name">Services</p>
+                <ul class="nodes" style="--n: 3">
+                  <li><strong>Itinerary engine</strong><span>Rules and scheduling constraints</span></li>
+                  <li><strong>Background jobs</strong><span>Queues and scheduled ingestion</span></li>
+                  <li><strong>Integrations</strong><span>OpenAI, Stripe, third-party data APIs</span></li>
+                </ul>
+
+                <div class="wires" aria-hidden="true">
+                  <div class="stubs" style="--n: 3"><i></i><i></i><i></i></div>
+                  <div class="stubs stubs-in" style="--n: 4"><i></i><i></i><i></i><i></i></div>
+                </div>
+
+                <p class="tier-name">Data</p>
+                <ul class="nodes" style="--n: 4">
+                  <li><strong>PostgreSQL</strong><span>Aurora</span></li>
+                  <li><strong>Redis</strong><span>Cache and queues</span></li>
+                  <li><strong>S3</strong><span>File storage</span></li>
+                  <li><strong>SES</strong><span>Email</span></li>
                 </ul>
               </div>
 
-              <div class="rail-card">
-                <h3 class="h3">Typical stack</h3>
-                <div class="pill-row">
-                  <span class="pill">Node.js API</span>
-                  <span class="pill">Postgres + pgvector</span>
-                  <span class="pill">LLM (configurable)</span>
-                  <span class="pill">Product APIs</span>
-                  <span class="pill">AWS / cloud-agnostic</span>
-                </div>
-              </div>
+              <figcaption>
+                ParkPro’s architecture. The infrastructure is defined in CloudFormation and CDK, monitored
+                in CloudWatch and deployed through CI/CD with unit and integration tests.
+              </figcaption>
+            </figure>
 
-              <div class="rail-card rail-cta">
-                <h3 class="h3">Fastest way to start</h3>
-                <p class="muted">Send 3–5 bullets. I’ll reply with a plan.</p>
-                <a class="btn btn-gold btn-full" href="#contact">Request the brief</a>
+            <h4>What I built</h4>
+            <dl class="built">
+              <div>
+                <dt>Itinerary engine</dt>
+                <dd>A rule-based engine that turns external park data and each trip’s scheduling
+                  requirements into a day-by-day plan. Rules keep the output explainable, and the agent
+                  can change any of it.</dd>
               </div>
-            </div>
-          </aside>
+              <div>
+                <dt>Background processing</dt>
+                <dd>Third-party API integrations, automated data ingestion and scheduled jobs, run
+                  asynchronously through job queues.</dd>
+              </div>
+              <div>
+                <dt>AI inside the workflow</dt>
+                <dd>OpenAI is integrated into the screens agents already use, not added as a separate
+                  chatbot. The system proposes and the agent approves.</dd>
+              </div>
+              <div>
+                <dt>Infrastructure as code</dt>
+                <dd>AWS infrastructure defined in CloudFormation and CDK, covering EC2, Aurora, S3, SES
+                  and CloudWatch.</dd>
+              </div>
+              <div>
+                <dt>Testing and delivery</dt>
+                <dd>CI/CD pipelines with automated unit and integration tests. I plan, implement and
+                  test with Cursor coding agents, with the test suite as the check.</dd>
+              </div>
+              <div>
+                <dt>Operations</dt>
+                <dd>I own database migrations, deployments, production on-call and incident
+                  resolution.</dd>
+              </div>
+            </dl>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- OFFER -->
-    <section id="offer" class="section section-band">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="h2">What you’re getting</h2>
-          <p class="subhead">A production integration built with constraints—so it’s useful to users and predictable in production.</p>
-        </div>
+    <section class="block" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <h2 id="experience-title">Experience</h2>
 
-        <div class="feature-grid">
-          <div class="feature">
-            <div class="feature-title">Production-safe AI layer</div>
-            <div class="feature-body">Clear intent routing, tight prompt boundaries, and refusal behavior that won’t surprise users or your support team.</div>
-          </div>
-          <div class="feature">
-            <div class="feature-title">Grounded answers</div>
-            <div class="feature-body">RAG with approved sources, citations/traceability options, and “don’t know” behavior when context isn’t available.</div>
-          </div>
-          <div class="feature">
-            <div class="feature-title">Guardrails + escalation</div>
-            <div class="feature-body">Policy rules, user-safe fallbacks, and a clear path to human support when confidence is low or requests are out of scope.</div>
-          </div>
-          <div class="feature">
-            <div class="feature-title">Observability hooks</div>
-            <div class="feature-body">Structured logs/telemetry, prompt + retrieval audits, and a feedback loop so you can improve safely over time.</div>
-          </div>
-          <div class="feature">
-            <div class="feature-title">MVP path</div>
-            <div class="feature-body">A scoped “safe minimum” that ships quickly, then expands with guardrails intact (not a rewrite later).</div>
-          </div>
-          <div class="feature">
-            <div class="feature-title">Integration-ready</div>
-            <div class="feature-body">Designed to plug into real product surfaces: web apps, help centers, internal tools, or onboarding flows.</div>
-          </div>
-        </div>
-
-        <div class="band-callout">
-          <div class="callout-left">
-            <div class="callout-title">If you only do one thing…</div>
-            <div class="callout-body">Start with the brief. You’ll get a safe scope + MVP architecture so you can move forward with confidence.</div>
-          </div>
-          <a class="btn btn-gold" href="#contact">Get the brief</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section id="process" class="section section-dark">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="h2">How it works</h2>
-          <p class="subhead">A tight, low-risk process that gets you from idea → safe MVP → production iteration.</p>
-        </div>
-
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">1</div>
-            <div class="step-content">
-              <div class="step-title">Integration brief (scope + guardrails)</div>
-              <div class="step-body">We define safe capabilities, boundaries, escalation, and approved sources. You get an actionable plan.</div>
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step-num">2</div>
-            <div class="step-content">
-              <div class="step-title">MVP build (grounded + observable)</div>
-              <div class="step-body">Implement retrieval, prompting, policies, and logging. Ship a safe minimum without overbuilding.</div>
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step-num">3</div>
-            <div class="step-content">
-              <div class="step-title">Hardening + iteration</div>
-              <div class="step-body">Add evaluation checks, refine behavior, and expand scope based on real usage—without breaking trust.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="two-col">
-          <div class="panel">
-            <h3 class="h3">Where this fits best</h3>
-            <ul class="list">
-              <li>Customer support deflection with clear handoff to humans</li>
-              <li>Product search + Q&A grounded in docs / knowledge bases</li>
-              <li>Onboarding assistants that can’t “make things up”</li>
-              <li>Workflow helpers that operate inside strict rules</li>
-            </ul>
-          </div>
-          <div class="panel">
-            <h3 class="h3">What we optimize for</h3>
-            <ul class="list">
-              <li>Predictable behavior (even when users try weird inputs)</li>
-              <li>Clear boundaries + safe refusals</li>
-              <li>Reduced risk (security, brand, compliance, support)</li>
-              <li>Measurable improvements over time</li>
+        <div class="row">
+          <p class="key">2021–2025</p>
+          <div class="val">
+            <h3>Software Engineer <span class="role">Allied Payment Network</span></h3>
+            <p>Enterprise fintech: digital banking and payment processing software for financial institutions.</p>
+            <ul class="points">
+              <li>Built and maintained payment and digital banking applications in C#, .NET Core, SQL Server and JavaScript.</li>
+              <li>Wrote and tuned SQL for application performance and data integrity.</li>
+              <li>Worked on asynchronous processing, job queues, multithreading and concurrency.</li>
+              <li>Provisioned infrastructure with CloudFormation and CDK, and shipped through CI/CD with unit and integration tests.</li>
+              <li>Took production on-call, investigated incidents, and contributed to mentoring and knowledge sharing across engineering, QA and DevOps.</li>
             </ul>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- EXAMPLE -->
-    <section id="example" class="section section-band">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="h2">Example (what “production-safe” looks like)</h2>
-          <p class="subhead">A simple, real flow: user asks → system grounds → guardrails apply → safe answer or escalation.</p>
-        </div>
-
-        <div class="example-grid">
-          <div class="example-card">
-            <div class="example-label">User</div>
-            <div class="example-body">“Can I change my plan? What does it cost?”</div>
-          </div>
-
-          <div class="example-card">
-            <div class="example-label">System</div>
-            <div class="example-body">
-              Retrieves approved policy doc + pricing source → checks for eligibility → answers with constraints and a clear next step.
-            </div>
-          </div>
-
-          <div class="example-card">
-            <div class="example-label">Guardrails</div>
-            <div class="example-body">
-              If the plan is unclear or pricing is missing → “I don’t have enough info” + escalation prompt, not a guess.
-            </div>
-          </div>
-        </div>
-
-        <div class="boundaries">
-          <div class="section-head tight">
-            <h2 class="h2">Boundaries (so it doesn’t go sideways)</h2>
-            <p class="subhead">This is part of the value. Clear constraints reduce risk and support load.</p>
-          </div>
-
-          <div class="boundary-grid">
-            <div class="boundary">
-              <div class="boundary-title">No “open-ended chatbot” behavior</div>
-              <div class="boundary-body">We design intent + scope first. If it’s outside scope, it refuses or escalates—cleanly.</div>
-            </div>
-            <div class="boundary">
-              <div class="boundary-title">No ungrounded claims</div>
-              <div class="boundary-body">If sources aren’t present, the system says so. “Don’t know” is a feature.</div>
-            </div>
-            <div class="boundary">
-              <div class="boundary-title">No silent failures</div>
-              <div class="boundary-body">Logging and traceability are built-in so issues can be diagnosed and improved quickly.</div>
-            </div>
-            <div class="boundary">
-              <div class="boundary-title">Human escalation is deliberate</div>
-              <div class="boundary-body">When confidence is low, the user gets a clean handoff path—no frustrating loops.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT / CTA -->
-    <section id="contact" class="section section-cta">
-      <div class="container">
-        <div class="cta-surface">
-          <div class="cta-left">
-            <h2 class="h2">Request an AI Integration Brief</h2>
-            <p class="subhead">
-              Send 3–5 bullets about your product + what you want AI to do. I’ll reply with recommended scope, guardrails,
-              and an MVP path.
+        <div class="row">
+          <p class="key">2019–2021</p>
+          <div class="val">
+            <h3>Conversion Specialist, then Support Specialist <span class="role">Allied Payment Network</span></h3>
+            <p>
+              I started on the customer side of the same platform: migrating and validating financial
+              institutions’ data during onboarding, then Tier 2 support for digital banking applications,
+              where I worked with engineering on recurring defects and wrote internal documentation and
+              support scripts. I joined the engineering team in 2021.
             </p>
-
-            <div class="cta-pills">
-              <span class="pill">Clear scope</span>
-              <span class="pill">Guardrails-first</span>
-              <span class="pill">MVP plan</span>
-              <span class="pill">Risks + mitigations</span>
-            </div>
-          </div>
-
-          <div class="cta-right">
-            <div class="form-card">
-              <div class="form-title">Fastest option</div>
-              <p class="muted">Email me a few bullets and a link to any docs (optional).</p>
-
-              <a class="btn btn-gold btn-full"
-                 href="mailto:kyle.todoran@parkproit.com?subject=AI%20Integration%20Brief&body=Hi%20Kyle%2C%0A%0AHere%E2%80%99s%20what%20we%20want%20AI%20to%20do%3A%0A-%20%0A-%20%0A-%20%0A%0AContext%20%2F%20links%20(optional)%3A%0A-%20%0A%0AConstraints%20or%20risks%20to%20consider%3A%0A-%20%0A">
-                Email the brief request
-              </a>
-
-              <div class="or-line"><span>or</span></div>
-
-              <div class="contact-mini">
-                <div class="contact-label">Email</div>
-                <div class="contact-value">
-                  <a href="mailto:kyle.todoran@parkproit.com">kyle.todoran@parkproit.com</a>
-                </div>
-              </div>
-
-              <div class="contact-mini">
-                <div class="contact-label">Location</div>
-                <div class="contact-value">Fort Wayne, IN</div>
-              </div>
-            </div>
           </div>
         </div>
 
-        <footer class="footer">
-          <div class="footer-inner">
-            <div class="footer-left">
-              <div class="footer-title">Kyle Todoran</div>
-              <div class="footer-sub">AI Integration Specialist • Production-safe customer-facing AI</div>
-            </div>
-            <div class="footer-right">
-              <a href="#offer">Offer</a>
-              <a href="#process">Process</a>
-              <a href="#example">Example</a>
-              <a href="#top">Back to top</a>
-            </div>
+        <div class="row">
+          <p class="key">2009–2020</p>
+          <div class="val">
+            <h3>Manager <span class="role">Fort Wayne’s Famous Coney Island</span></h3>
+            <p>Ran daily operations, scheduling and training for a team of more than 15.</p>
           </div>
-          <div class="footer-bottom">
-            <span>© <span id="y"></span> Kyle Todoran</span>
-            <span class="dot">•</span>
-            <span>Built on GitHub Pages</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <h2 id="skills-title">Skills</h2>
+
+        <dl class="skills inset">
+          <div>
+            <dt>Languages</dt>
+            <dd>C#, TypeScript, JavaScript, SQL, HTML, CSS</dd>
           </div>
-        </footer>
+          <div>
+            <dt>Backend</dt>
+            <dd>.NET Core, Node.js, Express.js, REST APIs, asynchronous processing, job queues, concurrency</dd>
+          </div>
+          <div>
+            <dt>Databases</dt>
+            <dd>PostgreSQL, Microsoft SQL Server, MongoDB, Redis</dd>
+          </div>
+          <div>
+            <dt>Cloud</dt>
+            <dd>AWS (EC2, Aurora, S3, SES, CloudWatch), CloudFormation, CDK, Azure, Docker</dd>
+          </div>
+          <div>
+            <dt>Frontend and mobile</dt>
+            <dd>React, React Native, Vite, Tailwind CSS, Styled Components</dd>
+          </div>
+          <div>
+            <dt>AI</dt>
+            <dd>OpenAI API, agentic AI-assisted development, Cursor</dd>
+          </div>
+          <div>
+            <dt>Payments</dt>
+            <dd>Stripe, Stripe Connect, financial transactions and ledgers</dd>
+          </div>
+          <div>
+            <dt>Practices</dt>
+            <dd>CI/CD, unit and integration testing, code review, pair programming, production on-call</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="block" id="education" aria-labelledby="education-title">
+      <div class="wrap">
+        <h2 id="education-title">Education</h2>
+        <div class="row">
+          <p class="key">2020</p>
+          <div class="val">
+            <h3>Full-Stack Web Development Certification <span class="role">Butler University</span></h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 id="contact-title">Contact</h2>
+        <dl class="ledger">
+          <div class="row">
+            <dt class="key">Email</dt>
+            <dd class="val"><a href="mailto:ktodoran@gmail.com">ktodoran@gmail.com</a></dd>
+          </div>
+          <div class="row">
+            <dt class="key">LinkedIn</dt>
+            <dd class="val"><a href="https://www.linkedin.com/in/ktodoran">linkedin.com/in/ktodoran</a></dd>
+          </div>
+          <div class="row">
+            <dt class="key">GitHub</dt>
+            <dd class="val"><a href="https://github.com/ktodoran">github.com/ktodoran</a></dd>
+          </div>
+          <div class="row">
+            <dt class="key">Resume</dt>
+            <dd class="val"><a href="Kyle_Todoran_Resume.pdf" type="application/pdf">Download the PDF</a></dd>
+          </div>
+          <div class="row">
+            <dt class="key">Location</dt>
+            <dd class="val">Fort Wayne, Indiana</dd>
+          </div>
+        </dl>
       </div>
     </section>
   </main>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <footer class="site-footer">
+    <div class="wrap site-footer-inner">
+      <p>© 2026 Kyle Todoran</p>
+      <p><a href="https://github.com/ktodoran/ktodoran.github.io">Source for this site</a></p>
+    </div>
+  </footer>
 </body>
 </html>
