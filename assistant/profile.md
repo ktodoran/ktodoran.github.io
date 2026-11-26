@@ -56,8 +56,10 @@ A double-entry ledger for payment systems, as a small HTTP service in C# on .NET
 - Every transaction's debits equal its credits; posted history is append-only and corrected by reversals.
 - Writes carry an idempotency key that commits in the same database transaction as the posting, so a retry never pays twice.
 - Concurrent payments against one account are serialized with row locks taken in a fixed order.
+- Payments have two lifecycles: instant (final at once) and ACH-style (pending, then settled, then possibly returned, or canceled first). Funds for a pending payment are held and cannot be spent twice.
+- Every change writes an event in the same database transaction, and the event feed is ordered so a reader cannot skip an event when transactions commit out of order.
 - The balance and append-only rules are also enforced inside PostgreSQL with triggers and constraints.
-- Not finished: no authentication, no pending or held funds, and no payment lifecycle yet. It has not run in production.
+- Not finished: no authentication, nothing settles by itself, and nothing connects to a bank or payment network. It has not run in production.
 
 ## Skills
 - Languages: C#, TypeScript, JavaScript, SQL, HTML, CSS

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import BreakControls from '../system/BreakControls.jsx';
 import SystemPanel from '../system/SystemPanel.jsx';
 import { COMPONENT_LAYER } from '../system/layout.js';
@@ -166,7 +166,14 @@ export default function Stage() {
 
       <div className="stage-copy">
         <section className="hero" id="top" ref={heroRef}>
-          <h1>{hero.headline}</h1>
+          <h1>
+            {hero.headline.map((phrase, index) => (
+              <Fragment key={phrase}>
+                {index > 0 && ' '}
+                <span>{phrase}</span>
+              </Fragment>
+            ))}
+          </h1>
           <p className="lead">{hero.lead}</p>
           <p className="lead">{hero.availability}</p>
           <p className="hero-actions">

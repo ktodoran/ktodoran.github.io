@@ -1,9 +1,10 @@
-import { useEffect, useMemo, useRef } from 'react';
-import { COMPONENT_LAYER, COMPONENT_NAME } from './layout.js';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { COMPONENT_DEPTH, COMPONENT_LAYER, COMPONENT_NAME } from './layout.js';
 import { systemStore } from './systemStore.js';
 
 const PER_EDGE = 3; // requests drawn on each edge
 const SAMPLES = 48; // points sampled along each edge path
+const INTRO_MS = 1600; // how long the load-in styles stay applied
 
 function detailFor(id, state) {
   switch (id) {
@@ -41,6 +42,14 @@ function statusOf(id, state) {
 export default function SystemDiagram({ layout, state, lit, tracer, onSelect }) {
   const svg = useRef(null);
   const dots = useRef([]);
+
+  // On first load the diagram switches on in the order a request travels.
+  // The sequence itself is CSS; this only takes its styles away afterwards.
+  const [intro, setIntro] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => setIntro(false), INTRO_MS);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Sample every edge path once, so the animation loop is plain array lookups.
   const tracks = useRef([]);
@@ -108,6 +117,7 @@ export default function SystemDiagram({ layout, state, lit, tracer, onSelect }) 
     <svg
       ref={svg}
       className="diagram"
+      data-intro={intro || undefined}
       viewBox={`0 0 ${layout.width} ${layout.height}`}
       role="group"
       aria-label="A diagram of a running service. Each part links to the skills behind it."
@@ -120,7 +130,7 @@ export default function SystemDiagram({ layout, state, lit, tracer, onSelect }) 
       </defs>
 
       {layout.region && (
-        <g className="region" data-focus={Boolean(lit?.has('region'))}>
+        <g className="region" data-focus={Boolean(lit?.has('region'))} style={{ '--depth': 1 }}>
           <rect {...layout.region} rx="18" />
           <text x={layout.region.x + 20} y={layout.region.y + 26} className="region-name">
             Cloud
@@ -133,10 +143,23 @@ export default function SystemDiagram({ layout, state, lit, tracer, onSelect }) 
 
       <g className="edges">
         {layout.edges.map((edge) => (
-          <path key={edge.id} data-edge={edge.id} d={edge.d} data-lit={isLit(edge.from) && isLit(edge.to)} />
+          <path
+            key={edge.id}
+            data-edge={edge.id}
+            d={edge.d}
+            pathLength="1"
+            data-lit={isLit(edge.from) && isLit(edge.to)}
+            style={{ '--depth': COMPONENT_DEPTH[edge.from] + 0.5 }}
+          />
         ))}
-        {layout.taps && <path className="tap" d={layout.taps} />}
-        <path className="page" d={layout.page} data-status={statusOf('oncall', state)} />
+        {layout.taps && <path className="tap" d={layout.taps} style={{ '--depth': COMPONENT_DEPTH.monitoring }} />}
+        <path
+          className="page"
+          d={layout.page}
+          pathLength="1"
+          data-status={statusOf('oncall', state)}
+          style={{ '--depth': COMPONENT_DEPTH.monitoring + 0.5 }}
+        />
       </g>
 
       <g className="requests" aria-hidden="true">
@@ -168,6 +191,7 @@ export default function SystemDiagram({ layout, state, lit, tracer, onSelect }) 
             data-status={statusOf(id, state)}
             data-lit={isLit(id)}
             data-focus={Boolean(lit?.has(id))}
+            style={{ '--depth': COMPONENT_DEPTH[id] }}
             aria-label={`${COMPONENT_NAME[id]}: ${detailFor(id, state)}. Go to the ${COMPONENT_LAYER[id]} layer.`}
             onClick={(event) => {
               event.preventDefault();

@@ -6,6 +6,7 @@ import BuildStrip from '../components/BuildStrip.jsx';
 import { LAYOUTS } from './layout.js';
 import { ALERTS, BASELINE, isIncidentOpen } from './simulation.js';
 import { systemStore } from './systemStore.js';
+import { showIncidentInTab } from './tabStatus.js';
 
 // The wide layout is used whenever it can be drawn at this scale or larger.
 const WIDE_MIN_SCALE = 0.8;
@@ -61,6 +62,11 @@ export default function SystemPanel({ lit, tracer, trace, onSelect }) {
   }, []);
 
   const open = isIncidentOpen(state);
+  useEffect(() => {
+    showIncidentInTab(open);
+    return () => showIncidentInTab(false);
+  }, [open]);
+
   // Times in the log are shown from the start of the incident they belong to.
   const startIndex = state.log.findLastIndex((entry) => entry.level === 'fault');
   const incident = startIndex >= 0 ? state.log.slice(startIndex) : [];

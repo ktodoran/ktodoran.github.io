@@ -11,7 +11,8 @@ export const person = {
 };
 
 export const hero = {
-  headline: 'I build production software and stay on call for it.',
+  // One phrase per entry. The headline only ever breaks between them.
+  headline: ['I build', 'production software', 'and stay on call for it.'],
   lead:
     'I’m Kyle Todoran, a full-stack engineer in Fort Wayne, Indiana. I spent four years building payment systems in fintech, and since 2025 I’ve been the founder and engineer of ParkPro, a B2B SaaS company.',
   availability:
@@ -166,11 +167,12 @@ export const projects = [
     name: 'Neon Ledger',
     kind: 'Open source · in progress',
     layers: ['services', 'data', 'operations'],
-    body: 'A double-entry ledger for payment systems. Every transaction balances, a retry never pays twice, and two payments cannot spend the same money.',
+    body: 'A double-entry ledger for payment systems, in C# on .NET 10 with EF Core and PostgreSQL. Every transaction balances, a retry never pays twice, and two payments cannot spend the same money.',
     points: [
-      'C# on .NET 10 with EF Core and PostgreSQL.',
+      'Payments that settle later and can come back, with the funds held until they do.',
       'Idempotency keys that commit in the same database transaction as the money movement.',
       'Row locks taken in a fixed order, so concurrent payments queue instead of racing or deadlocking.',
+      'An event feed that cannot skip an event, even when transactions commit out of order.',
       'Balanced, append-only history enforced by the database itself, with tests that go around the application to prove it.',
     ],
     link: { href: 'https://github.com/ktodoran/neon-ledger', label: 'Read the code on GitHub' },

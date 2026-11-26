@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { scrollToId } from '../lib/scroll.js';
 
 const isMac = typeof navigator !== 'undefined' && /Mac|iPhone|iPad/.test(navigator.platform);
@@ -11,13 +12,22 @@ export default function Header({ hasAssistant, onOpenPalette }) {
     { id: 'contact', label: 'Contact' },
   ];
 
+  // The header gets an edge once there is something scrolling beneath it.
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const update = () => setScrolled(window.scrollY > 4);
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    return () => window.removeEventListener('scroll', update);
+  }, []);
+
   const jump = (id) => (event) => {
     event.preventDefault();
     scrollToId(id);
   };
 
   return (
-    <header className="site-header">
+    <header className="site-header" data-scrolled={scrolled}>
       <div className="site-header-inner">
         <a className="site-name" href="#top" onClick={jump('top')}>
           Kyle Todoran

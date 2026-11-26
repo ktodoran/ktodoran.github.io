@@ -26,6 +26,19 @@ export const COMPONENT_NAME = {
   oncall: 'On call',
 };
 
+// How many hops each component is from the client. The diagram switches on in this order.
+export const COMPONENT_DEPTH = {
+  clients: 0,
+  api: 1,
+  model: 2,
+  queue: 2,
+  cache: 2,
+  workers: 3,
+  database: 3,
+  monitoring: 4,
+  oncall: 5,
+};
+
 // Which component each edge runs between. Requests travel them in this direction.
 const EDGES = [
   ['clients', 'api'],
