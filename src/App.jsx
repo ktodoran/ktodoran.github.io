@@ -5,7 +5,7 @@ import Assistant from './components/Assistant.jsx';
 import Contact from './components/Contact.jsx';
 import BuildStrip from './components/BuildStrip.jsx';
 import CommandPalette from './components/CommandPalette.jsx';
-import { layers, person } from './content/profile.js';
+import { layers, person, projects } from './content/profile.js';
 import { scrollToId } from './lib/scroll.js';
 import { requestTrace } from './lib/trace.js';
 
@@ -30,6 +30,7 @@ export default function App() {
         keywords: layer.skills.join(' '),
         run: go(`layer-${layer.id}`),
       })),
+      { id: 'projects', group: 'Go to', label: 'Projects', keywords: 'open source code portfolio', run: go('projects') },
       { id: 'experience', group: 'Go to', label: 'Experience', keywords: 'work history jobs career', run: go('experience') },
       ...(ASSISTANT_URL
         ? [{ id: 'ask', group: 'Go to', label: 'Ask about my work', keywords: 'ai assistant chat question', run: go('ask') }]
@@ -48,6 +49,13 @@ export default function App() {
       { id: 'resume', group: 'Actions', label: 'Open resume (PDF)', keywords: 'cv download', run: open(person.resume) },
       { id: 'linkedin', group: 'Actions', label: 'Open LinkedIn', keywords: 'profile', run: open(person.linkedin) },
       { id: 'github', group: 'Actions', label: 'Open GitHub', keywords: 'code repositories', run: open(person.github) },
+      ...projects.map((project) => ({
+        id: `project-${project.name}`,
+        group: 'Actions',
+        label: `Open ${project.name} on GitHub`,
+        keywords: 'code repository project',
+        run: open(project.link.href),
+      })),
       { id: 'source', group: 'Actions', label: 'View this site’s source', keywords: 'code repository react', run: open(person.source) },
     ];
   }, []);

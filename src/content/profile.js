@@ -39,9 +39,10 @@ export const layers = [
     color: 'gold',
     trace: 'If a model is involved, it proposes. A person decides.',
     summary: 'Models used where they earn their place, with a person keeping the final say.',
-    skills: ['OpenAI API', 'Agentic AI-assisted development', 'Cursor'],
+    skills: ['OpenAI API', 'Retrieval (RAG)', 'LLM evaluation', 'Agentic AI-assisted development', 'Cursor'],
     proof: [
       'Integrated OpenAI into production application workflows.',
+      'Built Neon Desk, an open-source support assistant with retrieval, guardrails and an evaluation harness.',
       'Plan, implement and test with coding agents every day, with automated tests as the check.',
     ],
   },
@@ -135,6 +136,23 @@ export const experience = [
     org: 'Fort Wayne’s Famous Coney Island',
     layers: ['operations'],
     body: 'Ran daily operations, scheduling and training for a team of more than 15.',
+  },
+];
+
+// Work you can read. `layers` lights the diagram the same way a job does.
+export const projects = [
+  {
+    name: 'Neon Desk',
+    kind: 'Open source · in progress',
+    layers: ['ai', 'services', 'data', 'operations'],
+    body: 'A customer support assistant any company can embed. It answers from the company’s own documents, shows which ones it used, and hands off to a person when it shouldn’t answer.',
+    points: [
+      'Hybrid retrieval on PostgreSQL: pgvector and full-text search, fused by rank.',
+      'Guardrails that route on what the customer is asking for, not on keywords, with card numbers removed on arrival.',
+      'An evaluation harness covering unanswerable questions, requests to act and prompt-injection attempts.',
+      'TypeScript, with tests that run against a real Postgres in process and CI on every push.',
+    ],
+    link: { href: 'https://github.com/ktodoran/neon-desk', label: 'Read the code on GitHub' },
   },
 ];
 

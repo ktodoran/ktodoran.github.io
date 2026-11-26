@@ -5,6 +5,7 @@ const isMac = typeof navigator !== 'undefined' && /Mac|iPhone|iPad/.test(navigat
 export default function Header({ hasAssistant, onOpenPalette }) {
   const links = [
     { id: 'stack', label: 'System' },
+    { id: 'projects', label: 'Projects' },
     { id: 'experience', label: 'Experience' },
     ...(hasAssistant ? [{ id: 'ask', label: 'Ask' }] : []),
     { id: 'contact', label: 'Contact' },

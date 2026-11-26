@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import BreakControls from '../system/BreakControls.jsx';
 import SystemPanel from '../system/SystemPanel.jsx';
 import { COMPONENT_LAYER } from '../system/layout.js';
-import { education, experience, hero, layers, person } from '../content/profile.js';
+import { education, experience, hero, layers, person, projects } from '../content/profile.js';
 import { scrollToId, STACKED_QUERY } from '../lib/scroll.js';
 import { onTraceRequested, requestTrace } from '../lib/trace.js';
 
@@ -28,13 +28,35 @@ function componentsOf(layerId) {
   return Object.keys(COMPONENT_LAYER).filter((id) => COMPONENT_LAYER[id] === layerId);
 }
 
-// Hero, the six layers and the work history, with the live system pinned
-// alongside. Whatever block is in focus decides what the diagram lights: a layer
-// lights its components, a job lights every layer that job touched.
+// All six layers, in order; the ones this job or project touched are lit.
+function UsedLayers({ used, onJump }) {
+  return (
+    <ul className="role-layers" aria-label="Layers worked in">
+      {layers.map((layer) =>
+        used.includes(layer.id) ? (
+          <li key={layer.id} className={`is-used accent-${layer.color}`}>
+            <a href={`#layer-${layer.id}`} onClick={onJump(`layer-${layer.id}`)}>
+              {layer.name}
+            </a>
+          </li>
+        ) : (
+          <li key={layer.id} aria-hidden="true">
+            {layer.name}
+          </li>
+        ),
+      )}
+    </ul>
+  );
+}
+
+// Hero, the six layers, projects and the work history, with the live system
+// pinned alongside. Whatever block is in focus decides what the diagram lights:
+// a layer lights its components, a project or job lights every layer it touched.
 export default function Stage() {
   const heroRef = useRef(null);
   const layerRefs = useRef([]);
   const roleRefs = useRef([]);
+  const projectRefs = useRef([]);
   const tracing = useRef(false);
   const [focus, setFocus] = useState(NO_FOCUS);
   const [traceStep, setTraceStep] = useState(-1);
@@ -65,6 +87,7 @@ export default function Stage() {
         }
       };
       layerRefs.current.forEach(consider('layer'));
+      projectRefs.current.forEach(consider('project'));
       roleRefs.current.forEach(consider('role'));
 
       const firstLayer = layerRefs.current[0]?.getBoundingClientRect();
@@ -115,6 +138,7 @@ export default function Stage() {
   const lit = useMemo(() => {
     if (traceStop) return new Set(componentsOf(traceStop.layer));
     if (focus.kind === 'layer') return new Set(componentsOf(layers[focus.index].id));
+    if (focus.kind === 'project') return new Set(projects[focus.index].layers.flatMap(componentsOf));
     if (focus.kind === 'role') return new Set(experience[focus.index].layers.flatMap(componentsOf));
     return null;
   }, [focus, traceStop]);
@@ -195,6 +219,34 @@ export default function Stage() {
           ))}
         </section>
 
+        <section id="projects" aria-labelledby="projects-title">
+          <h2 id="projects-title" className="stage-heading">
+            Projects
+          </h2>
+          {projects.map((project, index) => (
+            <article
+              key={project.name}
+              className={`stop role${focus.kind === 'project' && focus.index === index ? ' is-active' : ''}`}
+              ref={(node) => {
+                projectRefs.current[index] = node;
+              }}
+            >
+              <p className="role-dates">{project.kind}</p>
+              <h3>{project.name}</h3>
+              <p>{project.body}</p>
+              <ul className="points">
+                {project.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+              <p>
+                <a href={project.link.href}>{project.link.label}</a>
+              </p>
+              <UsedLayers used={project.layers} onJump={jump} />
+            </article>
+          ))}
+        </section>
+
         <section id="experience" aria-labelledby="experience-title">
           <h2 id="experience-title" className="stage-heading">
             Experience
@@ -224,22 +276,7 @@ export default function Stage() {
                   <a href={role.link.href}>{role.link.label}</a>
                 </p>
               )}
-              {/* All six layers, in order; the ones this job touched are lit. */}
-              <ul className="role-layers" aria-label="Layers worked in">
-                {layers.map((layer) =>
-                  role.layers.includes(layer.id) ? (
-                    <li key={layer.id} className={`is-used accent-${layer.color}`}>
-                      <a href={`#layer-${layer.id}`} onClick={jump(`layer-${layer.id}`)}>
-                        {layer.name}
-                      </a>
-                    </li>
-                  ) : (
-                    <li key={layer.id} aria-hidden="true">
-                      {layer.name}
-                    </li>
-                  ),
-                )}
-              </ul>
+              <UsedLayers used={role.layers} onJump={jump} />
             </article>
           ))}
 
