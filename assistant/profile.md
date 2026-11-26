@@ -41,14 +41,17 @@ Managed daily restaurant operations, scheduling and training for a team of more 
 ## Projects
 
 ### Neon Desk — open source, in progress (2026)
-https://github.com/ktodoran/neon-desk
+https://github.com/ktodoran/neon-desk — widget demo: https://ktodoran.github.io/neon-desk/
 A customer support assistant any company can embed. It answers from the company's own documents, cites the
 ones it used, and hands off to a person when it should not answer.
 - Hybrid retrieval on PostgreSQL: pgvector and full-text search, fused by rank.
 - Guardrails that route on the customer's intent rather than keywords; card numbers are removed on arrival.
 - An evaluation harness with cases for unanswerable questions, requests to act and prompt-injection attempts.
 - TypeScript and Node.js, with tests that run against a real Postgres in process and CI on every push.
-- Not finished: the evaluation has not been run against a live model yet, and the embeddable widget is not built.
+- An embeddable widget with no framework: one script tag, restyled by attributes, with a character whose motion
+  reports what the API is doing. Seven characters ship with it, and a site can register its own. The demo runs
+  on scripted answers, with no server or model behind it.
+- Not finished: the evaluation has not been run against a live model yet.
 
 ### Neon Ledger — open source, in progress (2026)
 https://github.com/ktodoran/neon-ledger

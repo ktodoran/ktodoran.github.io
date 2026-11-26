@@ -247,6 +247,12 @@ export default function Stage() {
                 ))}
               </ul>
               <p>
+                {project.demo && (
+                  <>
+                    <a href={project.demo.href}>{project.demo.label}</a>
+                    {' · '}
+                  </>
+                )}
                 <a href={project.link.href}>{project.link.label}</a>
               </p>
               <UsedLayers used={project.layers} onJump={jump} />
