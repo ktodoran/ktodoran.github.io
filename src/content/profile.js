@@ -110,6 +110,13 @@ export const experience = [
     link: { href: 'https://parkproit.com', label: 'Visit parkproit.com' },
   },
   {
+    dates: '2026–present',
+    title: 'Founder',
+    org: 'Neon Toad Digital',
+    layers: ['interface'],
+    body: 'Neon Toad Digital builds and maintains websites for small and local businesses. I run it end to end, from design and build through ongoing care.',
+  },
+  {
     dates: '2021–2025',
     title: 'Software Engineer',
     org: 'Allied Payment Network',

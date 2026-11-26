@@ -12,6 +12,10 @@ ParkPro is a B2B SaaS company for travel agencies. Kyle founded it and owns the 
 from architecture through deployments and production on-call. ParkPro continues to run alongside a full-time role.
 Product and company details are not covered here: point people to https://parkproit.com.
 
+### Neon Toad Digital — Founder (2026 to present)
+Neon Toad Digital builds and maintains websites for small and local businesses. Kyle runs it end to end,
+from design and build through ongoing care.
+
 ### Allied Payment Network — Software Engineer (January 2021 to April 2025), Fort Wayne, IN
 Enterprise fintech: digital banking and payment processing software for financial institutions.
 - Built and maintained applications in C#, .NET Core, Microsoft SQL Server, JavaScript and REST APIs.
