@@ -55,6 +55,7 @@ export const layers = [
     skills: ['C#', '.NET Core', 'Node.js', 'Express.js', 'REST APIs', 'Job queues', 'Concurrency', 'Stripe', 'Stripe Connect', 'Ledgers'],
     proof: [
       'Four years on payment processing and digital banking services at Allied Payment Network.',
+      'Built Neon Ledger, an open-source double-entry ledger in C# with idempotent postings and concurrency control.',
       'Asynchronous processing, job queues, multithreading and concurrency in production.',
       'REST APIs and scheduled background jobs for a SaaS product.',
     ],
@@ -160,6 +161,19 @@ export const projects = [
       'TypeScript, with tests that run against a real Postgres in process and CI on every push.',
     ],
     link: { href: 'https://github.com/ktodoran/neon-desk', label: 'Read the code on GitHub' },
+  },
+  {
+    name: 'Neon Ledger',
+    kind: 'Open source · in progress',
+    layers: ['services', 'data', 'operations'],
+    body: 'A double-entry ledger for payment systems. Every transaction balances, a retry never pays twice, and two payments cannot spend the same money.',
+    points: [
+      'C# on .NET 10 with EF Core and PostgreSQL.',
+      'Idempotency keys that commit in the same database transaction as the money movement.',
+      'Row locks taken in a fixed order, so concurrent payments queue instead of racing or deadlocking.',
+      'Balanced, append-only history enforced by the database itself, with tests that go around the application to prove it.',
+    ],
+    link: { href: 'https://github.com/ktodoran/neon-ledger', label: 'Read the code on GitHub' },
   },
 ];
 

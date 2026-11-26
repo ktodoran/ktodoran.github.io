@@ -50,6 +50,15 @@ ones it used, and hands off to a person when it should not answer.
 - TypeScript and Node.js, with tests that run against a real Postgres in process and CI on every push.
 - Not finished: the evaluation has not been run against a live model yet, and the embeddable widget is not built.
 
+### Neon Ledger — open source, in progress (2026)
+https://github.com/ktodoran/neon-ledger
+A double-entry ledger for payment systems, as a small HTTP service in C# on .NET 10 with EF Core and PostgreSQL.
+- Every transaction's debits equal its credits; posted history is append-only and corrected by reversals.
+- Writes carry an idempotency key that commits in the same database transaction as the posting, so a retry never pays twice.
+- Concurrent payments against one account are serialized with row locks taken in a fixed order.
+- The balance and append-only rules are also enforced inside PostgreSQL with triggers and constraints.
+- Not finished: no authentication, no pending or held funds, and no payment lifecycle yet. It has not run in production.
+
 ## Skills
 - Languages: C#, TypeScript, JavaScript, SQL, HTML, CSS
 - Backend: .NET Core, Node.js, Express.js, REST APIs, asynchronous processing, job queues, concurrency
