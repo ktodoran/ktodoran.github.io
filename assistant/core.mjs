@@ -149,7 +149,10 @@ export function createHandler({
       return json(200, { reply: await complete(messages) });
     } catch (error) {
       // Log the cause for CloudWatch; never return upstream details to the caller.
-      logger.error(JSON.stringify({ event: 'assistant_upstream_error', message: error.message }));
+      // The name matters: an AWS error such as ParameterNotFound has no message of its own.
+      logger.error(
+        JSON.stringify({ event: 'assistant_upstream_error', name: error.name, message: error.message }),
+      );
       return json(502, { error: 'upstream_unavailable' });
     }
   };

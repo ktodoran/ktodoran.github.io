@@ -124,6 +124,21 @@ test('hides upstream failures from the caller and logs them', async () => {
   assert.match(errors[0], /401/);
 });
 
+test('logs what kind of error it was when the key cannot be read', async () => {
+  const missing = Object.assign(new Error('UnknownError'), { name: 'ParameterNotFound' });
+  const { handler, errors, calls } = setup({
+    getApiKey: async () => {
+      throw missing;
+    },
+  });
+  const response = await handler(event());
+
+  assert.equal(response.statusCode, 502);
+  assert.deepEqual(parse(response), { error: 'upstream_unavailable' });
+  assert.equal(calls.length, 0);
+  assert.equal(JSON.parse(errors[0]).name, 'ParameterNotFound');
+});
+
 test('treats an empty completion as an upstream failure', async () => {
   const empty = async () => ({ ok: true, status: 200, json: async () => ({ choices: [{ message: { content: '' } }] }) });
   const { handler } = setup({ fetchImpl: empty });
