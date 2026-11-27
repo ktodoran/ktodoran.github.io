@@ -51,7 +51,8 @@ ones it used, and hands off to a person when it should not answer.
 - An embeddable widget with no framework: one script tag, restyled by attributes, with a character whose motion
   reports what the API is doing. Seven characters ship with it, and a site can register its own. The demo runs
   on scripted answers, with no server or model behind it.
-- Not finished: the evaluation has not been run against a live model yet.
+- Evaluated on a laptop with a small local model (gemma4:12b through Ollama): 38 of 38 cases passed, on a
+  small test set written alongside the system. It has not been evaluated against a hosted model yet.
 
 ### Neon Ledger — open source, in progress (2026)
 https://github.com/ktodoran/neon-ledger
