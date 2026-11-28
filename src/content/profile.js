@@ -168,7 +168,7 @@ export const projects = [
   {
     name: 'Neon Ledger',
     kind: 'Open source · in progress',
-    layers: ['services', 'data', 'operations'],
+    layers: ['interface', 'services', 'data', 'operations'],
     body: 'A double-entry ledger for payment systems, in C# on .NET 10 with EF Core and PostgreSQL. Every transaction balances, a retry never pays twice, and two payments cannot spend the same money.',
     points: [
       'Payments that settle later and can come back, with the funds held until they do.',
@@ -176,7 +176,9 @@ export const projects = [
       'Row locks taken in a fixed order, so concurrent payments queue instead of racing or deadlocking.',
       'An event feed that cannot skip an event, even when transactions commit out of order.',
       'Balanced, append-only history enforced by the database itself, with tests that go around the application to prove it.',
+      'A browser console in React with a guided tour. It runs on a simulation of the ledger, or on a real one on your machine, and CI fails if the two ever answer differently.',
     ],
+    demo: { href: 'https://ktodoran.github.io/neon-ledger/', label: 'Try the console' },
     link: { href: 'https://github.com/ktodoran/neon-ledger', label: 'Read the code on GitHub' },
   },
 ];

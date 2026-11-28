@@ -63,6 +63,7 @@ A double-entry ledger for payment systems, as a small HTTP service in C# on .NET
 - Payments have two lifecycles: instant (final at once) and ACH-style (pending, then settled, then possibly returned, or canceled first). Funds for a pending payment are held and cannot be spent twice.
 - Every change writes an event in the same database transaction, and the event feed is ordered so a reader cannot skip an event when transactions commit out of order.
 - The balance and append-only rules are also enforced inside PostgreSQL with triggers and constraints.
+- A browser console (React, Vite) at https://ktodoran.github.io/neon-ledger/ with a guided tour. It runs against a simulation of the ledger written in JavaScript, or against a real ledger running on the visitor's own machine. One script of requests is run against both in CI, which fails if they answer differently.
 - Not finished: no authentication, nothing settles by itself, and nothing connects to a bank or payment network. It has not run in production.
 
 ## Skills
