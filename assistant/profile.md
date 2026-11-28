@@ -64,7 +64,8 @@ A double-entry ledger for payment systems, as a small HTTP service in C# on .NET
 - Every change writes an event in the same database transaction, and the event feed is ordered so a reader cannot skip an event when transactions commit out of order.
 - The balance and append-only rules are also enforced inside PostgreSQL with triggers and constraints.
 - A browser console (React, Vite) at https://ktodoran.github.io/neon-ledger/ with a guided tour. It runs against a simulation of the ledger written in JavaScript, or against a real ledger running on the visitor's own machine. One script of requests is run against both in CI, which fails if they answer differently.
-- Not finished: no authentication, nothing settles by itself, and nothing connects to a bank or payment network. It has not run in production.
+- Callers authenticate with API keys: read-only or read-write, stored as hashes, issued and revoked from the command line. Idempotency keys are scoped to the caller, so a retry is still a replay after a caller rotates its key.
+- Not finished: any caller with a key can reach every account (accounts are not owned by callers), nothing settles by itself, and nothing connects to a bank or payment network. It has not run in production.
 
 ## Skills
 - Languages: C#, TypeScript, JavaScript, SQL, HTML, CSS
